@@ -20,12 +20,11 @@ Person Agenda::getOwner(){return this->owner;}
 /*
     Metodos esenciales @ clase Agenda
 */
-// void Agenda::addEvent(Event evento){
-//     for(int i = 0;i<this->events.size(); i++){
-//         if(this->events[i] == Event()){ // Assuming Event has a default constructor and operator==
-//             this->events.push_back(evento);
-//         }else{
-//             // Handle the case where the event slot is not empty
-//         }
-//     }
-// }
+void Agenda::addEvent(Event evento){
+    for(size_t i = 0;i<events.size(); i++){
+        if(events[i] == Event()){ // Assuming Event has a default constructor and operator==
+            events[i] = evento;
+        }
+    }
+    std::cout<<"Agenda llena, no se pudo añadir un evento!"<<std::endl;
+}
